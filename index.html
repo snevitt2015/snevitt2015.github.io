@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sydney Nevitt Portfolio</title>
+<meta name="description" content="Sydney Nevitt is a geospatial and intelligence analysis student at James Madison University with an active Secret clearance. See her NGA-partnered Eyes on the Arctic capstone, resume and certifications.">
+<meta property="og:title" content="Sydney Nevitt Portfolio">
+<meta property="og:description" content="Geospatial and intelligence analysis for national security. NGA-partnered Eyes on the Arctic capstone, resume and certifications.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="photo.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Almarai:wght@400;700&display=swap">
+<style>
+:root{
+  --stone:#e0e0db; --white:#ffffff; --navy:#253551; --ink:#111111; --muted:#4a4f57;
+  --line:#c9c9c2; --serif:"Libre Baskerville",Georgia,"Times New Roman",serif;
+  --sans:"Almarai",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--stone);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:3px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.25;margin:0 0 .5em}
+h1{font-size:clamp(34px,5vw,56px)}
+h2{font-size:clamp(28px,3.6vw,40px)}
+h3{font-size:clamp(21px,2.3vw,26px)}
+h4{font-size:21px}
+p{margin:0 0 1em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+section{padding:clamp(56px,8vw,104px) 0}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.large{font-size:clamp(19px,1.9vw,22px);line-height:1.6}
+.small{font-size:15px}
+.stone{background:var(--stone)} .white{background:var(--white)}
+.navy{background:var(--navy);color:#fff}
+.navy a{color:#fff}
+
+/* header */
+header.site{position:sticky;top:0;z-index:20;background:var(--stone);border-bottom:1px solid transparent;transition:border-color .2s}
+header.site.scrolled{border-bottom-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.brand{font-family:var(--serif);font-size:20px;text-decoration:none;white-space:nowrap}
+nav.main{display:flex;gap:26px}
+nav.main a{text-decoration:none;font-size:16px;padding:4px 0;border-bottom:1px solid transparent}
+nav.main a:hover,nav.main a.on{border-bottom-color:currentColor}
+.menu{display:none;background:none;border:0;font:inherit;font-size:16px;cursor:pointer;padding:8px 0;color:inherit}
+
+/* buttons */
+.btn{display:inline-block;padding:16px 34px;border:1px solid var(--navy);border-radius:999px;text-decoration:none;font-size:16px;transition:background .15s,color .15s}
+.btn:hover{background:var(--navy);color:#fff}
+.navy .btn{border-color:#fff}
+.navy .btn:hover{background:#fff;color:var(--navy)}
+
+/* hero */
+.hero{padding:clamp(40px,7vw,96px) 0}
+.hero .grid{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.hero .photo img{width:100%;height:auto;max-width:440px;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-left:auto}
+.hero h1{margin:6px 0 18px}
+
+/* tab bar */
+.tabs{padding:34px 0}
+.tabs .row{display:flex;justify-content:center;flex-wrap:wrap;gap:18px}
+.tabs .btn{min-width:200px;text-align:center}
+
+/* about */
+.about .grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+.about .map img{width:100%;border:1px solid var(--line)}
+
+/* featured */
+.center{text-align:center}
+.center p{max-width:760px;margin-left:auto;margin-right:auto}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:44px 0}
+.card .img{display:block;aspect-ratio:1;overflow:hidden;background:#d4d4ce}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.card a.img:hover img{transform:scale(1.04)}
+.card h4{margin:16px 0 8px}
+.card p{font-size:15px;margin-bottom:10px}
+.card .go{font-size:15px}
+
+/* capstone */
+.prose{max-width:860px}
+.pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin-top:8px;position:relative}
+.step{background:#efefea;border:2px solid var(--navy);border-radius:14px;padding:22px 14px;text-align:center;position:relative}
+.step b{display:block;font-size:13px;color:#3e5a80;letter-spacing:.06em}
+.step h4{margin:6px 0 8px;font-size:22px;color:var(--navy)}
+.step p{font-size:14px;color:var(--muted);margin:0;line-height:1.5}
+.step:not(:last-child)::after{content:"";position:absolute;right:-24px;top:50%;width:20px;height:2px;background:var(--navy)}
+.step:not(:last-child)::before{content:"";position:absolute;right:-26px;top:calc(50% - 5px);border:6px solid transparent;border-left:8px solid var(--navy);border-right:0}
+
+/* threat */
+.threat .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px 36px;margin:30px 0 14px}
+.stat h2{margin:0;font-size:clamp(34px,4vw,46px)}
+.stat h2 span{font-size:.45em;color:#c9d6ea}
+.stat p{font-size:15px;color:#d8dfe9}
+.threat .map img{width:100%;background:#fff}
+.threat .gap{border-top:1px solid rgba(255,255,255,.3);padding-top:26px;margin-top:10px}
+
+/* contributions */
+.contrib .grid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+.contrib .side{position:sticky;top:96px}
+.contrib .side img{width:100%}
+.contrib .side figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.items{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:20px 0 40px}
+.items h4{font-size:19px}
+.flags{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:12px 0 40px}
+.flag{background:#efefea;border-left:3px solid var(--navy);padding:14px 18px;font-size:15px}
+.flag b{display:block;font-family:var(--serif);font-weight:400;font-size:17px}
+ul{margin:0 0 1.2em;padding-left:1.2em}
+li{margin-bottom:6px}
+.video{margin-top:26px}
+.video video{width:100%;display:block;background:#000}
+
+/* resume */
+.resume .head{max-width:900px}
+.rgrid{display:grid;grid-template-columns:220px 1fr;gap:20px 48px;margin-top:40px}
+.rgrid>h2{grid-column:1/-1;margin:24px 0 0;padding-top:28px;border-top:1px solid var(--line)}
+.rgrid .when{font-size:15px;color:var(--muted);padding-top:6px}
+.rgrid h3{margin-bottom:4px}
+.rgrid .org{font-weight:700;font-size:16px;margin-bottom:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px 48px}
+
+/* certs */
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.cert{background:var(--white);padding:26px 26px 22px;border-top:3px solid var(--navy)}
+.cert .eyebrow{font-size:12px;margin-bottom:8px;color:#3e5a80}
+.cert h3{font-size:21px;margin-bottom:8px}
+.cert p{font-size:15px;margin:0}
+
+/* footer */
+footer{padding:60px 0 70px;border-top:1px solid var(--line)}
+footer .grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-end}
+footer .right{text-align:right}
+footer .email{font-size:clamp(19px,2vw,22px)}
+.contact h2{margin-bottom:10px}
+
+@media (max-width:980px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .pipeline{grid-template-columns:1fr;gap:26px;max-width:420px}
+  .step:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-24px;width:2px;height:20px}
+  .step:not(:last-child)::before{right:auto;left:calc(50% - 6px);top:auto;bottom:-27px;border:6px solid transparent;border-top:8px solid var(--navy);border-bottom:0}
+  .items{grid-template-columns:1fr}
+  .certs{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:820px){
+  nav.main{display:none;position:absolute;top:72px;left:0;right:0;background:var(--stone);flex-direction:column;gap:0;padding:6px clamp(16px,4vw,48px) 16px;border-bottom:1px solid var(--line)}
+  nav.main.open{display:flex}
+  nav.main a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .menu{display:block}
+  .hero .grid,.about .grid,.threat .grid,.contrib .grid{grid-template-columns:1fr}
+  .hero .photo{order:-1}
+  .hero .photo img{max-width:240px;margin:0}
+  .contrib .side{position:static}
+  .rgrid{grid-template-columns:1fr;gap:6px}
+  .rgrid .when{padding-top:18px}
+  .two,.flags{grid-template-columns:1fr}
+  footer .right{text-align:left}
+}
+@media (max-width:560px){
+  .cards,.certs,.stats{grid-template-columns:1fr}
+  .tabs .btn{min-width:0;flex:1 1 40%;padding:14px 10px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top">Sydney Nevitt Portfolio</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="main" id="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#capstone">Capstone</a>
+      <a href="#resume">Resume</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="hero stone">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">B.S. Integrated Science and Technology · Geospatial Analysis for International Security · James Madison University · May 2027</p>
+      <h1>Sydney Nevitt</h1>
+      <p class="large">Geospatial and intelligence analysis for national security. I'm drawn to problems where careful data shows what others miss.</p>
+      <p><strong>ACTIVE SECRET CLEARANCE</strong> · U.S. citizen · Fredericksburg, VA</p>
+    </div>
+    <div class="photo"><img src="photo.jpg" alt="Headshot of Sydney Nevitt" width="440" height="440"></div>
+  </div>
+</section>
+
+<!-- Tab bar -->
+<section class="tabs navy" aria-label="Sections">
+  <div class="wrap row">
+    <a class="btn" href="#about">About</a>
+    <a class="btn" href="#capstone">Capstone</a>
+    <a class="btn" href="#resume">Resume</a>
+    <a class="btn" href="#certifications">Certifications</a>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about white" id="about">
+  <div class="wrap grid">
+    <div class="map"><img src="arctic-sea-routes.jpg" alt="Map of Arctic sea routes, including the Northern Sea Route and Northwest Passage" loading="lazy"></div>
+    <div>
+      <p class="eyebrow">About</p>
+      <h3>Mission-focused analyst in training</h3>
+      <p>Integrated Science and Technology student at James Madison University, concentrating in Geospatial Analysis for International Security with a minor in Environmental Studies.</p>
+      <p>I've cataloged hazardous materials at Naval Surface Warfare Center Dahlgren, maintained project databases as an engineering aide in the defense sector, and am now part of an NGA-partnered capstone team that identifies Russian vessels operating dark in the Arctic.</p>
+      <p><strong>Active Secret</strong> clearance · U.S. citizen<br><strong>May 2027</strong> expected graduation<br><strong>Dean's List</strong> · <strong>Global Impact Award</strong></p>
+      <p><strong>Core tools:</strong> ArcGIS Pro · GEGD Pro · SAR and optical imagery · geospatial mapping · Excel · GitHub · SharePoint · SolidWorks · Fusion 360</p>
+      <p style="margin-top:28px"><a class="btn" href="#resume">View resume</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Featured -->
+<section class="featured stone">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Featured project · Capstone · NGA partnership</p>
+      <h2>Eyes on the Arctic</h2>
+      <p>An open-source intelligence system that fuses satellite imagery with AIS data to identify Russian vessels in the Arctic, even after they switch off their transponders.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <a class="img" href="#contributions"><img src="captureStill.jpg" alt="3D-printed vessel model filmed under a fixed light to capture training data" loading="lazy"></a>
+        <h4>Training data capture</h4>
+        <p>3D-printed vessels filmed under a fixed light at six camera angles to build a reproducible image set.</p>
+        <a class="go" href="#contributions">See the approach →</a>
+      </article>
+      <article class="card">
+        <a class="img" href="#capstone"><img src="model.jpg" alt="3D-printed LNG tanker model used for vessel detection trials" loading="lazy"></a>
+        <h4>Scale vessel models</h4>
+        <p>A 3D-printed LNG tanker, one of 10+ hull classes modeled for machine learning detection trials.</p>
+        <a class="go" href="#capstone">See what I built →</a>
+      </article>
+      <article class="card">
+        <a class="img" href="https://lnkd.in/p/e4p_Q5XG" target="_blank" rel="noopener"><img src="poster.jpg" alt="Eyes on the Arctic capstone poster, winner of the JMU CISE Global Impact Award" loading="lazy"></a>
+        <h4>Global Impact Award</h4>
+        <p>Our Eyes on the Arctic poster won at the JMU CISE Symposium, Apr 2026.</p>
+        <a class="go" href="https://lnkd.in/p/e4p_Q5XG" target="_blank" rel="noopener">Read the LinkedIn post →</a>
+      </article>
+      <article class="card">
+        <a class="img" href="https://lnkd.in/p/e7JZSPfB" target="_blank" rel="noopener"><img src="arctic-sea-routes.jpg" alt="Map of Arctic sea routes, including the Northern Sea Route and Northwest Passage" loading="lazy"></a>
+        <h4>Presented to CISE leadership</h4>
+        <p>Briefed the Dean of CISE and the College External Advisory Council, Sep 2026.</p>
+        <a class="go" href="https://lnkd.in/p/e7JZSPfB" target="_blank" rel="noopener">Read the LinkedIn post →</a>
+      </article>
+    </div>
+    <div class="center"><a class="btn" href="#capstone">See the full capstone</a></div>
+  </div>
+</section>
+
+<!-- Capstone -->
+<section class="capstone stone" id="capstone" style="padding-top:0">
+  <div class="wrap">
+    <div class="prose">
+      <p class="eyebrow">ISAT 491 Capstone · In partnership with the NGA · Sponsored by USSOCOM</p>
+      <h1>Eyes on the Arctic</h1>
+      <p class="large">Vessel identification through satellites and automation</p>
+      <p>Working with the National Geospatial-Intelligence Agency, our four-person team is building an open-source intelligence system that can identify a ship even after it turns off its transponder. It fuses satellite imagery with AIS records, uses machine learning to detect vessels, and flags every place where what a ship reports about itself disagrees with what the imagery shows.</p>
+      <p><strong>Status:</strong> In progress · Expected completion May 2027</p>
+      <p><strong>Recognition:</strong> Global Impact Award, CISE Symposium (Apr 2026) · <a href="https://lnkd.in/p/e4p_Q5XG" target="_blank" rel="noopener">Read the LinkedIn post</a><br>Presented to the Dean of CISE and the College External Advisory Council (Sep 2026) · <a href="https://lnkd.in/p/e7JZSPfB" target="_blank" rel="noopener">Read the LinkedIn post</a></p>
+      <h2 style="margin-top:44px">How we're building it</h2>
+    </div>
+    <div class="pipeline" role="list" aria-label="Project pipeline">
+      <div class="step" role="listitem"><b>01</b><h4>Observe</h4><p>SAR + optical imagery</p></div>
+      <div class="step" role="listitem"><b>02</b><h4>Collect</h4><p>AIS identity, position, course</p></div>
+      <div class="step" role="listitem"><b>03</b><h4>Detect</h4><p>ML finds ships in imagery</p></div>
+      <div class="step" role="listitem"><b>04</b><h4>Match</h4><p>Pair detections with AIS records</p></div>
+      <div class="step" role="listitem"><b>05</b><h4>Validate</h4><p>Switzer Lake drone trials</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Threat -->
+<section class="threat navy">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">The growing threat</p>
+      <h2>The Arctic threat</h2>
+      <p class="large">Russia's shadow fleet is moving through the Arctic with its transponders switched off, and today's monitoring tools can't keep up.</p>
+      <p>Traffic on the Northern Sea Route is rising quickly, and a growing share of it is shadow-fleet tankers moving sanctioned oil with AIS off or gaps in their broadcasts. AIS fails exactly where the risk is growing fastest, and the U.S. has little physical presence to fill the gap.</p>
+      <div class="stats">
+        <div class="stat"><h2>103</h2><p>Full Northern Sea Route transits in 2025, on pace for about 150 in 2026</p></div>
+        <div class="stat"><h2>70–80%</h2><p>Of Russia's seaborne crude exports carried on shadow fleet tankers</p></div>
+        <div class="stat"><h2>100 <span>(up from 13)</span></h2><p>Sanctioned vessels on the route in 2025 versus 2024</p></div>
+        <div class="stat"><h2>43 vs 3</h2><p>Russian icebreakers versus U.S. polar icebreakers, so persistent monitoring has to come from orbit</p></div>
+      </div>
+      <div class="gap">
+        <h3>The collection gap</h3>
+        <p>Satellite imagery shows what is physically on the water; AIS shows what ships say about themselves. The intelligence lives in the disagreements between them: a hull with no signal, a signal with no hull, or a broadcast identity that doesn't match the ship in the image.</p>
+      </div>
+    </div>
+    <div class="map"><img src="arctic-sea-routes.jpg" alt="Map of Arctic sea routes, including the Northern Sea Route and Northwest Passage" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- Contributions -->
+<section class="contrib stone" id="contributions">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">My contributions</p>
+      <h2>What I built and collected</h2>
+      <div class="items">
+        <div><h4>Built project code</h4><p class="small">Wrote code for the project's imagery processing and vessel detection work.</p></div>
+        <div><h4>Collected SAR and optical imagery</h4><p class="small">Gathered synthetic aperture radar and optical satellite imagery of vessels for detection and matching.</p></div>
+        <div><h4>Captured training data</h4><p class="small">Recorded a 3D-printed tanker model under a fixed light source at six camera elevations, 20° to 45°, to build a reproducible image set: 1,728 labeled views per model across 10+ vessel classes.</p></div>
+      </div>
+      <h3>What the matching engine reports</h3>
+      <div class="flags">
+        <div class="flag"><b>Vessel identified</b>Detection matches an AIS record</div>
+        <div class="flag"><b>Dark vessel flagged</b>Ship in the image, no AIS signal</div>
+        <div class="flag"><b>Possible spoofing</b>AIS signal where the image shows no ship</div>
+        <div class="flag"><b>Identity mismatch</b>Both present, but length or class disagree</div>
+      </div>
+      <h3>Skills used</h3>
+      <ul>
+        <li><strong>Geospatial analysis</strong>: ArcGIS Pro, GEGD Pro, mapping</li>
+        <li><strong>OSINT fusion</strong>: AIS data, MarineTraffic, satellite imagery</li>
+        <li><strong>Machine learning and computer vision</strong>: OpenCV, pytesseract, ML detection</li>
+        <li><strong>Database management</strong>: Excel, AIS data</li>
+        <li><strong>3D modeling and data collection</strong>: Fusion 360, SolidWorks, 3D printing</li>
+        <li><strong>Intelligence research and briefing</strong>: OSINT, policy research, presenting</li>
+      </ul>
+      <h3>Next steps</h3>
+      <ul>
+        <li>Finalize the vessel database</li>
+        <li>Finish printing and photographing 10+ vessel classes</li>
+        <li>Train the optical detector and build the AIS matching engine</li>
+        <li>Run drone trials at Switzer Lake and measure accuracy by class</li>
+        <li>Document a framework for allied deployment</li>
+      </ul>
+      <h3>Team</h3>
+      <p><strong>Students:</strong> Caleb Martinez, Sydney Nevitt, Adam Rop, Austin Sullivan<br><strong>Faculty advisors:</strong> Dr. Chris Bachmann, Dr. Philip Baxter, Dr. Tim Walton<br><strong>Partner and sponsor:</strong> National Geospatial-Intelligence Agency (NGA), U.S. Special Operations Command (USSOCOM)</p>
+    </div>
+    <figure class="side" style="margin:0">
+      <img src="model.jpg" alt="3D-printed LNG tanker model built for the Eyes on the Arctic capstone" loading="lazy">
+      <figcaption>3D-printed model of an LNG tanker for detection trials.</figcaption>
+      <div class="video">
+        <video src="capture.mp4" poster="captureStill.jpg" muted loop playsinline controls preload="metadata" aria-label="Training data capture video"></video>
+        <figcaption>Training data capture: the tanker model rotating under a low sun angle, recorded at six camera elevations.</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- Resume -->
+<section class="resume white" id="resume">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Resume</p>
+      <h1>Experience and education</h1>
+      <p class="large">A results-driven learner focused on continuous improvement. I use research skills to gather and analyze data for informed decisions, adapt quickly to new challenges, and contribute to team efforts with critical and holistic thinking. U.S. citizen holding an active Secret security clearance.</p>
+      <p><a href="mailto:snevitt2015@gmail.com">snevitt2015@gmail.com</a> · <a href="https://www.linkedin.com/in/sydney-nevitt-1b982738b/" target="_blank" rel="noopener">LinkedIn</a> · Fredericksburg, VA</p>
+      <p style="margin-top:22px"><a class="btn" href="Sydney_Nevitt_Resume.pdf" download>Download resume (PDF)</a></p>
+    </div>
+    <div class="rgrid">
+      <h2>Experience</h2>
+      <div class="when">2024 – Present</div>
+      <div><h3>Engineering Aide</h3><div class="org">AI Signal Research Inc · Dahlgren, VA</div>
+        <ul><li>Administer and maintain an accurate database of critical project information, protecting data integrity.</li><li>Manage hazardous materials in strict line with safety protocols and regulations.</li><li>Work with the Safety department to reinforce workplace safety standards and reduce risk.</li><li>Build technical knowledge across several engineering disciplines.</li></ul></div>
+      <div class="when">Jan 2026 – Present</div>
+      <div><h3>Teaching Assistant, Energy Issues in Science and Technology</h3><div class="org">James Madison University · Harrisonburg, VA</div>
+        <ul><li>Support course instruction and grade homework and labs.</li><li>Tutor students one-on-one on core course material.</li></ul></div>
+      <div class="when">May – Aug 2023</div>
+      <div><h3>SEAP Intern</h3><div class="org">Naval Surface Warfare Center Dahlgren Division · Dahlgren, VA</div>
+        <ul><li>Created a database cataloging chemicals on base for accurate tracking and compliance.</li><li>Streamlined information management so personnel could find what they needed.</li><li>Rotated through multiple departments, gaining cross-functional experience in naval engineering operations.</li></ul></div>
+      <h2>Education</h2>
+      <div class="when">Expected May 2027</div>
+      <div><h3>B.S., Integrated Science and Technology</h3><div class="org">James Madison University · Harrisonburg, VA · ABET accredited</div>
+        <ul><li>Concentration: Geospatial Analysis for International Security</li><li>Minor: Environmental Studies</li><li>Dean's List</li><li>Alpha Delta Pi, Community Service Committee</li><li>Theta Tau, Risk Management Chair</li></ul></div>
+      <h2>Coursework and skills</h2>
+      <div class="when"></div>
+      <div class="two">
+        <div><h3>Related coursework</h3><ul><li>Capstone with the NGA: tracking Russian vessels through satellites and automation</li><li>Chemical, Biological and Radiological Weapons of Mass Destruction</li><li>Geospatial Intelligence Certificate Program</li><li>Applied Computing, Instrumentation and Measurement</li><li>Programming and Problem Solving</li></ul></div>
+        <div><h3>Skills</h3><ul><li>Database management: Excel, GitHub, SharePoint</li><li>Data visualization: ArcGIS Pro, GEGD Pro, geospatial mapping</li><li>3D modeling: SolidWorks, Fusion 360</li><li>Risk assessment: sampling and analysis, hazardous waste management, environmental compliance</li><li>Energy: sustainability initiatives, cost-benefit analysis, intelligence gathering</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="stone" id="certifications">
+  <div class="wrap">
+    <p class="eyebrow">Certifications</p>
+    <h1>Credentials and awards</h1>
+    <p class="large">HAZWOPER, OPSEC, Insider Threat, Laser Safety, CPR, and the Global Impact Award.</p>
+    <div class="certs">
+      <div class="cert"><p class="eyebrow">Award</p><h3>Global Impact Award</h3><p>CISE Symposium, JMU · Apr 2026 · For the Eyes on the Arctic poster · <a href="https://lnkd.in/p/e4p_Q5XG" target="_blank" rel="noopener">Read the LinkedIn post</a></p></div>
+      <div class="cert"><p class="eyebrow">Safety</p><h3>HAZWOPER</h3><p>Hazardous Waste Operations and Emergency Response · OSHA</p></div>
+      <div class="cert"><p class="eyebrow">Security</p><h3>OPSEC Awareness</h3><p>For military members, DoD employees and contractors</p></div>
+      <div class="cert"><p class="eyebrow">Security</p><h3>Insider Threat Awareness</h3><p>Department of Defense</p></div>
+      <div class="cert"><p class="eyebrow">Safety</p><h3>Basic Laser Safety</h3><p>Laboratory safety</p></div>
+      <div class="cert"><p class="eyebrow">Safety</p><h3>CPR</h3><p>Cardiopulmonary resuscitation · First aid</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Contact / footer -->
+<footer class="stone contact" id="contact">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk</h2>
+      <p>The best way to reach me is by email or LinkedIn.</p>
+    </div>
+    <div class="right">
+      <p class="email"><a href="mailto:snevitt2015@gmail.com">snevitt2015@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/sydney-nevitt-1b982738b/" target="_blank" rel="noopener">LinkedIn</a> · <a href="Sydney_Nevitt_Resume.pdf" download>Download resume (PDF)</a> · Fredericksburg, VA</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var h=document.querySelector("header.site"),nav=document.getElementById("nav"),btn=document.querySelector(".menu");
+  function onScroll(){h.classList.toggle("scrolled",window.scrollY>4)}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+  btn.addEventListener("click",function(){var o=nav.classList.toggle("open");btn.setAttribute("aria-expanded",o)});
+  nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");btn.setAttribute("aria-expanded","false")}});
+  var links=[].slice.call(nav.querySelectorAll("a")),ids=links.map(function(a){return a.getAttribute("href").slice(1)});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
+    ids.forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
+  }
+})();
+</script>
+</body>
+</html>
